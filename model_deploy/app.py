@@ -60,3 +60,5 @@ if st.button('Submit for Predictions'):
         st.write("**Great!** You are likely to survive in the Titanic crash.")
     else:
         st.write("**Sorry**. Please don't board the Titanic. You are most likely not going to survive")
+
+st.write('This app is created by Sundar.')
