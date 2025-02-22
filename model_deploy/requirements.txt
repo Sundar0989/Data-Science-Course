@@ -1,0 +1,8 @@
+pandas
+numpy
+streamlit
+matplotlib
+seaborn
+scikit-learn==1.4.2
+flask
+shap

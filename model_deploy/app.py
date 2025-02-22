@@ -12,11 +12,13 @@ st.header('User Input Parameters')
 # Pclass - variable mapping (1 = First, 2 = Second, 3 = Third)
 pclass = st.selectbox('Passenger class', ['First', 'Second', 'Third'], index=None)
 # Map pclass to integer
-pclass = {'First': 1, 'Second': 2, 'Third': 3}[pclass]
+if pclass is not None:
+    pclass = {'First': 1, 'Second': 2, 'Third': 3}[pclass]
 
 # Gender - variable mapping (0 = Male, 1 = Female)
 gender = st.selectbox('Gender', ['Male', 'Female'], index=None)
-gender = gender.lower()
+if gender is not None:
+    gender = gender.lower()
 
 # Age - variable mapping (0 to 80)
 age = st.slider('Age', 0, 80, 30)
@@ -33,7 +35,8 @@ fare = st.slider('Fare', 0, 550, 50)
 # Embarked - variable mapping (0 = Southampton, 1 = Cherbourg, 2 = Queenstown)
 
 embarked = st.selectbox('Boarding Point', ['Southampton', 'Cherbourg', 'Queenstown'], index=None)
-embarked = {'Southampton': 'S', 'Cherbourg': 'C', 'Queenstown': 'Q'}[embarked]
+if embarked is not None:
+    embarked = {'Southampton': 'S', 'Cherbourg': 'C', 'Queenstown': 'Q'}[embarked]
 
 # map_inputs_to_dict    
 map_inputs_to_dict = {'Pclass': pclass, 
@@ -61,4 +64,7 @@ if st.button('Submit for Predictions'):
     else:
         st.write("**Sorry**. Please don't board the Titanic. You are most likely not going to survive")
 
-st.write('This app is created by Sundar.')
+
+
+
+
