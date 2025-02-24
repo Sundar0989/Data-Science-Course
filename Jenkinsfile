@@ -14,15 +14,15 @@ pipeline {
 
         }
 
-        stage('Build Docker Image') {
+        // stage('Build Docker Image') {
 
-            steps {
+        //     steps {
 
-                sh 'docker build -t sundar0989/demo_titanic_app .' 
+        //         sh 'docker build -t sundar0989/demo_titanic_app .' 
 
-            }
+        //     }
 
-        }
+        // }
 
         // stage('Run Docker Container') {
 
