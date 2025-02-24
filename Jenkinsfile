@@ -18,7 +18,7 @@ pipeline {
 
             steps {
 
-                sh 'docker image build -t sundar0989/demo_titanic_app .' 
+                sh 'docker build -t sundar0989/demo_titanic_app .' 
 
             }
 
