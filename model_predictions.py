@@ -28,4 +28,4 @@ def predict_survival(df):
     df = data_preprocessing(df)
     X = df.drop(['PassengerId', 'Survived'], axis=1)
     prediction = model.predict(X)
-    return prediction
+    return prediction, X
